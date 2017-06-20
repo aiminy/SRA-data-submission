@@ -1,19 +1,25 @@
-# Hello, world!
-#
-# This is an example function named 'hello' 
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' Title
+#'
+#' @param input.bam.file.path 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' 
+#' input.bam.file.path <- "/media/H_driver/2016/Submission2SRA/Guoyan_Nimer_mouse_RNA-Seq_BAM/"
+#' 
+#' callSubmitter(input.bam.file.path)
+#' 
+#' 
+callSubmitter <- function(input.bam.file.path) {
+  
+  cmd0="sh /home/aiminyan/Code/bash_SRA_submission_updated.sh"
+  
+  input.bam.file.path <- input.bam.file.path
+  
+  cmd1=paste(cmd0,input.bam.file.path,sep=" ")
+  
+  system(cmd1)
 
-CallBash <- function() {
-  cmd="sh /home/aiminyan/Code/bash_SRA_submission_updated.sh /media/H_driver/2016/Submission2SRA/Guoyan_Nimer_mouse_RNA-Seq_BAM/"
-  system(cmd)
 }
