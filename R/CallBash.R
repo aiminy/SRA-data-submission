@@ -1,7 +1,8 @@
-#' Title
+#' callSubmitter
 #'
 #' @param input.bam.file.path 
-#'
+#' @param aspera.openssh.file
+#' 
 #' @return
 #' @export
 #'
