@@ -16,7 +16,7 @@ callSubmitter <- function(input.bam.file.path) {
   
   R_LIB=.libPaths()
   
-  cmd0 <- file.path(R_LIB,"SraSubmitter/bin/bash_SRA_submission_updated.sh")
+  cmd0 <- file.path(R_LIB,"SraSubmitter/bin/bash/bash_SRA_submission_updated.sh")
   
   input.bam.file.path <- input.bam.file.path
   
