@@ -14,11 +14,13 @@
 #' 
 callSubmitter <- function(input.bam.file.path) {
   
-  cmd0="sh /home/aiminyan/Code/bash_SRA_submission_updated.sh"
+  R_LIB=.libPaths()
+  
+  cmd0 <- file.path(R_LIB,"SraSubmitter/bin/bash_SRA_submission_updated.sh")
   
   input.bam.file.path <- input.bam.file.path
   
-  cmd1=paste(cmd0,input.bam.file.path,sep=" ")
+  cmd1=paste("sh",cmd0,input.bam.file.path,sep=" ")
   
   system(cmd1)
 
