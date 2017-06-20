@@ -16,13 +16,14 @@ SRA data submission is a tedious process. The submitter needs to read the whole 
 
 1. Download and install Aspera Connect software from: http://downloads.asperasoft.com/connect2/ for enabling to upload large files in a batch manner
 
-1. R -e 'library(devtools);install_github("aiminy/SraSubmitter")'
+1. R -e 'library(devtools);install_github("aiminy/SRA-data-submission")'
 
 After this, run the follwoing:
-
 ```{r}
 library(SraSubmitter)
+# Ex: you put your bam files in the following directory
 input.bam.file.path <- "/media/H_driver/2016/Submission2SRA/Guoyan_Nimer_mouse_RNA-Seq_BAM/"
+# you can run
 callSubmitter(input.bam.file.path)
 ```
 
